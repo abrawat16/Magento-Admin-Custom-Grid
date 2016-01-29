@@ -1,5 +1,7 @@
 # magento-custom-grid
-- Create a custom grid in admin for "staff"
+ 
+- This extension creates a Staff Grid for the Magento Admin area.
+- This extension includes ajax functionality for Admin Grid area.
 
-- Add a menu "Staff" with sub menu "Manage Staff" 
-- Customisable grid using ajax functionality
+Tested on Magento 1.8 above  
+ 
