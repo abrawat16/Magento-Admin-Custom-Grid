@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+    <!-- we are defining a new admin panel menu item -->
+    <menu>
+        
+        <!--
+        first create a top level menu item which will appear alongside CMS
+        -->
+        <abhishek_mymodule translate="title"
+                module="abhishek_mymodule">
+            <title>Staff</title>
+            <sort_order>75</sort_order>
+            <depends>
+                <module>Abhishek_Mymodule</module>
+            </depends>
+            
+            <!-- under this top level menu create a child menu item -->
+            <children>
+                <staff translate="title" 
+                        module="abhishek_mymodule">
+                    <title>Manage Staffs</title>
+                    <sort_order>10</sort_order>
+                    
+                    <!-- 
+                    when the menu is clicked, take the user here 
+                    -->
+                 <action>abhishek_mymodule_admin/Staff</action>
+                    
+                </staff>
+            </children>
+        </abhishek_mymodule>
+    </menu>
+    
+    <!-- define ACL for access to these menu items -->
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <abhishek_mymodule translate="title"
+                            module="abhishek_mymodule">
+                        <title>Staff Directory</title>
+                        <sort_order>75</sort_order>
+                        <children>
+                            <staff translate="title" 
+                                    module="abhishek_mymodule">
+                                <title>Manage Staffs</title>
+                            </staff>
+                        </children>
+                    </abhishek_mymodule>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
